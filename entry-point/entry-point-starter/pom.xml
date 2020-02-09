@@ -7,22 +7,27 @@
         <groupId>com.project</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>entry-point-starter</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>com.project</groupId>
             <artifactId>entry-point-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.project</groupId>
             <artifactId>entry-point-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.project.demo</groupId>
+            <artifactId>system-user-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 </project>

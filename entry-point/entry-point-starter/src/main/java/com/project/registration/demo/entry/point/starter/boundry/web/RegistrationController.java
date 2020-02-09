@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.registration.demo.entry.point.api.SystemUserApiService;
-import com.project.registration.demo.entry.point.api.request.SystemUserCreationRequest;
+import com.project.registration.demo.system.user.api.request.SystemUserCreationRequest;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

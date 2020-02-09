@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.project.registration.demo.system.user.starter.configuration.SystemUserAutoConfiguration,\
+  com.project.registration.demo.system.user.starter.configuration.RestConfiguration

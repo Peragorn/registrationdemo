@@ -13,6 +13,6 @@ public class SystemUserAutoConfiguration {
     @ConditionalOnMissingBean(SystemUserApiService.class)
     @Import({MainSystemUserService.class})
     @Configuration
-    public static class EmailConfiguration {
+    public static class MainSystemUserConfiguration {
     }
 }
