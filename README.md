@@ -13,3 +13,6 @@ JDBC URL: jdbc:h2:mem:testdb
 login: sa
 
 hasło: sa
+
+##Swagger
+http://localhost:8080/swagger-ui.html
