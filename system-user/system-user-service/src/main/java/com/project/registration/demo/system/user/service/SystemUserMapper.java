@@ -1,20 +1,18 @@
 package com.project.registration.demo.system.user.service;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
+import com.project.registration.demo.system.user.api.request.SystemUserCreationRequest;
+import com.project.registration.demo.system.user.api.request.SystemUserUpdateRequest;
+import com.project.registration.demo.system.user.api.response.SystemUserResponse;
+import com.project.registration.demo.system.user.mapping.SystemUser;
+import lombok.extern.slf4j.Slf4j;
+import org.mapstruct.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import com.project.registration.demo.system.user.api.request.SystemUserCreationRequest;
-import com.project.registration.demo.system.user.mapping.SystemUser;
-
-import lombok.extern.slf4j.Slf4j;
-
 @Slf4j
 @Component
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
 public abstract class SystemUserMapper {
 
     @Autowired
@@ -25,4 +23,10 @@ public abstract class SystemUserMapper {
     })
     abstract SystemUser toSystemUser(SystemUserCreationRequest request);
 
+    @Mappings({
+            @Mapping(target = "password", expression = "java(passwordEncoder.encode(request.getPassword()))"),
+    })
+    abstract SystemUser toSystemUser(SystemUserUpdateRequest request, @MappingTarget SystemUser systemUser);
+
+    public abstract SystemUserResponse toSystemUserResponse(SystemUser user);
 }

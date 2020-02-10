@@ -28,6 +28,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--<mainClass>com.project.registration.demo.entry.point.starter.EntryPointApplication</mainClass>-->
+                    <!--FIXME: to delete-->
+                    <skip>true</skip>
+                </configuration>
             </plugin>
         </plugins>
     </build>
