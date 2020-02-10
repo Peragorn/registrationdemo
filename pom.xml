@@ -24,6 +24,7 @@
     <properties>
         <org.mapstruct.version>1.2.0.Final</org.mapstruct.version>
         <springfox-swagger2.version>2.7.0</springfox-swagger2.version>
+        <vavr.version>0.9.2</vavr.version>
     </properties>
 
     <dependencies>
@@ -121,6 +122,12 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${springfox-swagger2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.vavr</groupId>
+            <artifactId>vavr</artifactId>
+            <version>${vavr.version}</version>
         </dependency>
 
     </dependencies>
