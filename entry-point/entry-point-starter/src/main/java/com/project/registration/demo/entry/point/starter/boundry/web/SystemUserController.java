@@ -25,7 +25,7 @@ public class SystemUserController {
     @PutMapping()
     @ResponseStatus(CREATED)
     @ResponseBody
-    public void update(@Valid @NotNull SystemUserUpdateRequest request) {
+    public void update(@Valid @RequestBody SystemUserUpdateRequest request) {
         log.info("Received request to update system user {request: {}}", request);
         systemUserApiService.update(request);
     }
