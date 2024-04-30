@@ -24,7 +24,7 @@
     <properties>
         <org.mapstruct.version>1.2.0.Final</org.mapstruct.version>
         <springfox-swagger2.version>2.7.0</springfox-swagger2.version>
-        <vavr.version>0.9.2</vavr.version>
+        <vavr.version>0.10.4</vavr.version>
     </properties>
 
     <dependencies>
